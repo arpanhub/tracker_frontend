@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Hide scrollbar for horizontal navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* Custom responsive utilities */
+@layer utilities {
+  .text-responsive {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+  
+  .p-responsive {
+    @apply p-3 sm:p-4 lg:p-6;
+  }
+  
+  .gap-responsive {
+    @apply gap-2 sm:gap-3 lg:gap-4;
+  }
+}
+
+/* Ensure proper mobile touch targets */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Better mobile form inputs */
+input, select, textarea {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Responsive text truncation */
+.truncate-responsive {
+  @apply truncate sm:text-clip;
+}
+
+/* Mobile-first responsive spacing */
+.space-y-responsive > * + * {
+  @apply mt-3 sm:mt-4 lg:mt-6;
+}
+
+.space-x-responsive > * + * {
+  @apply ml-2 sm:ml-3 lg:ml-4;
+}
+
+/* Better mobile card layouts */
+.card-responsive {
+  @apply p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm sm:shadow-lg;
+}
+
+/* Mobile-optimized grid */
+.grid-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6;
+}
+
+/* Mobile navigation improvements */
+.nav-responsive {
+  @apply flex overflow-x-auto space-x-1 sm:space-x-4 lg:space-x-8 px-2 sm:px-4 lg:px-6;
+}
+
+/* Mobile chart container */
+.chart-responsive {
+  @apply h-48 sm:h-64 lg:h-80 w-full;
+}
+
+/* Better mobile modal/dropdown positioning */
+.modal-responsive {
+  @apply fixed inset-x-0 bottom-0 sm:inset-0 sm:flex sm:items-center sm:justify-center;
+}
+
+/* Mobile-optimized forms */
+.form-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4;
+}
+
+/* Responsive achievement badges */
+.achievement-responsive {
+  @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4;
+}
